@@ -168,7 +168,7 @@
             android:backgroundTint="@color/darkGrey"
             android:layout_margin="2dp"
             android:id="@+id/btnPoint"
-            android:onClick="resetCalculator"
+            android:onClick="clearOnClick"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
