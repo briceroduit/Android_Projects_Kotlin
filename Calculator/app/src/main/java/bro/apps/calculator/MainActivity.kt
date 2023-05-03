@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         tvInput?.append((view as Button).text)
     }
 
-    fun resetCalculator(view: View){
+    fun clearOnClick(view: View){
         tvInput?.text = ""
 
     }
