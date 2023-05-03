@@ -16,4 +16,5 @@
     <string name="_Clear">Clr</string>
     <string name="_Minus">-</string>
     <string name="_Result">=</string>
+    <string name="_dot">.</string>
 </resources>
