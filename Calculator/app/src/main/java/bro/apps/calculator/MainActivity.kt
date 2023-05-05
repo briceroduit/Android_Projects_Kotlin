@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
         tvInput = findViewById(R.id.tvInput)
     }
 
+    // Identifies the input pressed
     fun onDigit(view: View){
         tvInput?.append((view as Button).text)
         lastNumeric = true
@@ -27,11 +28,13 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    // Resets the View of the Calculator
     fun clearOnClick(view: View){
         tvInput?.text = ""
 
     }
 
+    //add the dot to the numbers
     fun onDecimalPoint(view: View){
         if(lastNumeric && !lastDot){
             tvInput?.append(".")
@@ -40,5 +43,29 @@ class MainActivity : AppCompatActivity() {
         }
 
         // Can only have one dot in the view
+    }
+
+    // Checks the existence of the last number and one operator
+    fun onOperator(view: View){
+        tvInput?.text?.let {
+            if (lastNumeric && !isOperatorAdded(it.toString())) {
+                tvInput?.append((view as Button).text)
+                lastNumeric = false
+                lastDot = true
+            }
+
+        }
+    }
+    private fun isOperatorAdded(value: String) : Boolean{
+        return if(value.startsWith("-")){
+            false
+        }else{
+            value.contains("/")
+                    ||value.contains("*")
+                    ||value.contains("+")
+                    ||value.contains("-")
+
+        }
+
     }
 }
