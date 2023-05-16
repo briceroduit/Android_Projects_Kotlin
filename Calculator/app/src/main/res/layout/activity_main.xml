@@ -158,11 +158,20 @@
         <Button
             android:backgroundTint="@color/darkGrey"
             android:layout_margin="2dp"
+            android:id="@+id/btnDot"
+            android:onClick="onDecimalPoint"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/_Dot"/>
+        <Button
+            android:backgroundTint="@color/darkGrey"
+            android:layout_margin="2dp"
             android:id="@+id/btnZero"
             android:onClick="onDigit"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="2"
+            android:layout_weight="1"
             android:text="@string/_0"/>
         <Button
             android:backgroundTint="@color/darkGrey"
